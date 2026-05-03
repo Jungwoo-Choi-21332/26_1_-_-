@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>장화홍련: 부서진 장미 기획 데크</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif; background-color: #020617; color: #f8fafc; }
+        .slide {
+            width: 100%; max-width: 1280px; margin: 0 auto;
+            min-height: 720px;
+            background-color: #020617;
+            padding: 60px 80px; position: relative; overflow: hidden;
+            display: flex; flex-direction: column;
+            border-bottom: 1px solid #1e293b;
+            box-sizing: border-box;
+        }
+        .slide-title-page { justify-content: center; text-align: center; }
+        .slide-title-page h1 { font-size: 84px; line-height: 1.1; margin: 20px 0; font-weight: 900; }
+        .slide-title-page .category { letter-spacing: 8px; color: #fb7185; font-weight: 700; font-size: 18px; }
+        .slide-title-page .subtitle { font-size: 28px; color: #94a3b8; margin-top: 20px; }
+        .slide-header { font-size: 44px; font-weight: 700; border-left: 10px solid #fb7185; padding-left: 25px; margin-bottom: 50px; }
+        .content-body { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+        h3 { font-size: 32px; color: #fb7185; margin-bottom: 20px; }
+        p { font-size: 22px; line-height: 1.6; color: #cbd5e1; margin-bottom: 20px; }
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .tiled-content { display: flex; gap: 30px; }
+        .tile { flex: 1; background: #0f172a; padding: 40px; border-radius: 20px; border-bottom: 5px solid #fb7185; }
+        .tile.danger { border-bottom-color: #e11d48; }
+        .bullet-list { list-style: none; padding: 0; }
+        .bullet-list li { position: relative; padding-left: 45px; font-size: 22px; margin-bottom: 25px; color: #cbd5e1; }
+        .bullet-list li i { position: absolute; left: 0; top: 5px; color: #fb7185; font-size: 24px; }
+        .chart-container { display: flex; flex-direction: column; gap: 20px; }
+        .bar { display: flex; align-items: center; gap: 20px; }
+        .bar .label { flex: 0 0 250px; text-align: right; font-weight: 700; font-size: 20px; }
+        .bar .bar-inner { flex-grow: 1; height: 40px; background: #1e293b; border-radius: 20px; overflow: hidden; }
+        .bar .bar-fill { height: 100%; background: linear-gradient(90deg, #fb7185, #f43f5e); display: flex; align-items: center; justify-content: flex-end; padding-right: 20px; font-weight: 700; color: white; }
+        .timeline-layout { display: flex; justify-content: space-between; position: relative; margin-top: 50px; }
+        .timeline-line { position: absolute; top: 120px; width: 100%; height: 4px; z-index: 0; }
+        .timeline-item { width: 28%; text-align: center; position: relative; z-index: 1; }
+        .timeline-dot { width: 24px; height: 24px; background: #fb7185; border-radius: 50%; margin: 35px auto; border: 5px solid #020617; }
+        .slide::after {
+            content: ''; position: absolute; bottom: -100px; right: -100px;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(251, 113, 133, 0.05) 0%, transparent 70%);
+        }
+        @media print {
+            .slide { page-break-after: always; border-bottom: none; }
+        }
+    </style>
+</head>
+<body>
+    
+        <div class="slide slide-title-page">
+            <div class="category">PROJECT: SILENT GUARDIAN</div>
+            <h1>네온 장화홍련:<br><span style='color: #fb7185;'>부서진 장미</span></h1>
+            <div class="subtitle">아동학대 대응 잔혹극: 텍스트 기반 심리 스릴러 게임 기획안</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-header">고전의 현대적 변주: 유산과 탐욕</div>
+            <div class="content-body">
+                
+            <h3>비극의 재구성</h3>
+            <p>고전 설화 '장화홍련'의 핵심 모티프를 현대 사회의 가장 어두운 단면인 '재산권을 둘러싼 가정 내 학대'로 재해석했습니다.</p>
+            <ul class='bullet-list'>
+                <li><i class='fa-solid fa-gem'></i> <strong>동기:</strong> 단순한 증오를 넘어선 '막대한 유산'에 대한 탐욕</li>
+                <li><i class='fa-solid fa-house-lock'></i> <strong>배경:</strong> 겉으로는 평온해 보이는 평범한 저택</li>
+                <li><i class='fa-solid fa-user-shield'></i> <strong>개입:</strong> 원혼의 복수가 아닌 전문 기관의 '법적 구제'</li>
+            </ul>
+        
+            </div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-header">대한민국 아동학대 실태 (2023)</div>
+            <div class="content-body">
+                
+            <div class='chart-container'>
+                <div class='bar'>
+                    <div class='label'>아동학대 판단 건수</div>
+                    <div class='bar-inner'><div class='bar-fill' style='width: 85%;'>25,739건</div></div>
+                </div>
+                <div class='bar'>
+                    <div class='label'>가해자 중 부모 비중</div>
+                    <div class='bar-inner'><div class='bar-fill' style='width: 86%;'>85.9%</div></div>
+                </div>
+                <div class='bar'>
+                    <div class='label'>재학대 발생 사례</div>
+                    <div class='bar-inner'><div class='bar-fill' style='width: 16%;'>4,034건</div></div>
+                </div>
+            </div>
+            <p style='margin-top: 30px; font-size: 16px; color: #94a3b8;'>*출처: 보건복지부 2023년 아동학대 연차보고서</p>
+            <div style='margin-top: 15px; padding: 15px; background: rgba(251, 113, 133, 0.1); border-radius: 8px;'>
+                <p style='font-size: 16px; margin: 0;'><strong>통계 상세 보기:</strong> <a href='https://www.mohw.go.kr/board.es?mid=a10411010200&bid=0019&act=view&list_no=1482961' style='color: #fb7185;'>보건복지부 아동학대 주요통계 보도자료</a></p>
+            </div>
+        
+            </div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-header">플레이어블 캐릭터</div>
+            <div class="content-body">
+                
+            <div class='two-column'>
+                <div>
+                    <h3>1. 아동학대 대응 센터장</h3>
+                    <ul class='bullet-list'>
+                        <li><i class='fa-solid fa-magnifying-glass'></i> <strong>현장 수사:</strong> 학대 정황 포착 및 법적 대응 주도</li>
+                        <li><i class='fa-solid fa-ear-listen'></i> <strong>증거 수집:</strong> 외부 조력자로서 채증 및 구조 기획</li>
+                        <li><i class='fa-solid fa-gavel'></i> <strong>긴급 분리:</strong> 법적 영장 집행 및 가해자 격리</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>2. 장화 & 홍련</h3>
+                    <ul class='bullet-list'>
+                        <li><i class='fa-solid fa-child'></i> <strong>내부 생존:</strong> 저택 내 감금 상황에서의 심리적 버티기</li>
+                        <li><i class='fa-solid fa-microphone'></i> <strong>실시간 채증:</strong> 가해자의 학대 정황을 직접 기록</li>
+                        <li><i class='fa-solid fa-paper-plane'></i> <strong>비밀 소통:</strong> 센터장에게 내부 정보 및 증거 전달</li>
+                    </ul>
+                </div>
+            </div>
+        
+            </div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-header">등장인물: 피해자와 가해자</div>
+            <div class="content-body">
+                
+            <div class='tiled-content'>
+                <div class='tile'>
+                    <h3>장화 & 홍련</h3>
+                    <p>유산의 정당한 상속자들. 계모에 의해 지하실에 감금되어 신체적·정신적 고통을 겪고 있습니다.</p>
+                </div>
+                <div class='tile danger'>
+                    <h3>계모 (가해자)</h3>
+                    <p>완벽한 어머니의 가면 뒤에 유산 탈취를 위한 치밀한 학대 계획을 숨긴 소시오패스적 인물.</p>
+                </div>
+            </div>
+        
+            </div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-header">핵심 게임 메커니즘</div>
+            <div class="content-body">
+                
+            <div class='two-column'>
+                <div>
+                    <div style='margin-bottom: 30px;'>
+                        <div class='flex justify-between mb-1'><span style='color: #fb7185; font-weight: 700;'>심리적 안정도 (Mental)</span></div>
+                        <div class='bar-inner' style='height: 20px; background: #334155; border-radius: 10px;'><div style='width: 60%; height: 100%; background: #fb7185; border-radius: 10px;'></div></div>
+                        <p style='font-size: 14px; margin-top: 5px;'>자매의 정신 건강. 0%가 되면 비극적 엔딩 직행</p>
+                    </div>
+                    <div>
+                        <div class='flex justify-between mb-1'><span style='color: #60a5fa; font-weight: 700;'>학대 증거 확보 (Evidence)</span></div>
+                        <div class='bar-inner' style='height: 20px; background: #334155; border-radius: 10px;'><div style='width: 80%; height: 100%; background: #60a5fa; border-radius: 10px;'></div></div>
+                        <p style='font-size: 14px; margin-top: 5px;'>기소 성공률. 70% 이상이어야 진엔딩 도달 가능</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>다중 시점 시스템</h3>
+                    <p>플레이어는 센터장과 자매의 시점을 교차하며 외부 수사와 내부 생존을 동시에 컨트롤합니다.</p>
+                </div>
+            </div>
+        
+            </div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-header">게임 플롯: 세 가지 침묵</div>
+            <div class="content-body">
+                
+            <div class='timeline-layout'>
+                <div class='timeline-line' style='background: #334155;'></div>
+                <div class='timeline-item'>
+                    <div class='timeline-dot'></div>
+                    <h3>감금된 정원</h3>
+                    <p>저택 내 학대 인지 및 잠입 시작</p>
+                </div>
+                <div class='timeline-item'>
+                    <div class='timeline-dot'></div>
+                    <h3>구원의 손길</h3>
+                    <p>센터장과 자매의 접촉 및 증거 장비 전달</p>
+                </div>
+                <div class='timeline-item'>
+                    <div class='timeline-dot'></div>
+                    <h3>심판의 시간</h3>
+                    <p>폭력의 결정적 순간 포착 및 긴급 체포</p>
+                </div>
+            </div>
+        
+            </div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-header">엔딩 시스템: 수사의 결과</div>
+            <div class="content-body">
+                
+            <div class='two-column'>
+                <div style='background: rgba(96, 165, 250, 0.1); padding: 30px; border-radius: 15px; border: 1px solid #60a5fa;'>
+                    <h3 style='color: #60a5fa;'>TRUE ENDING</h3>
+                    <p><strong>증거 70% 이상:</strong> 가해자의 완벽한 법적 처벌 및 자매의 사회적 재활 성공.</p>
+                </div>
+                <div style='background: rgba(251, 113, 133, 0.1); padding: 30px; border-radius: 15px; border: 1px solid #fb7185;'>
+                    <h3 style='color: #fb7185;'>BAD ENDING</h3>
+                    <p><strong>증거 부족:</strong> 가해자의 집행유예 석방 및 자매의 영구적인 트라우마 잔존.</p>
+                </div>
+            </div>
+        
+            </div>
+        </div>
+        
+        <div class="slide slide-title-page">
+            <div class="category">THANK YOU</div>
+            <h1>아이들의 침묵에<br><span>응답할 시간</span>입니다.</h1>
+            <div class="subtitle">GitHub: <a href='https://github.com/Jungwoo-Choi-21332/26_1_-_-.git' style='color: #fb7185; text-decoration: none;'>Jungwoo-Choi-21332/26_1_-_-</a></div>
+        </div>
+        
+</body>
+</html>
